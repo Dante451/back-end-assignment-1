@@ -1,7 +1,25 @@
 import express, { Request, Response } from 'express';
+import setupSwagger from "../config/swagger";
 
 // Initialize the Express app
 const app = express();
+export default app;
+
+setupSwagger(app);
+
+/**
+ * @openapi
+ * /tasks:
+ *   get:
+ *     summary: Retrieve a list of tasks
+ *     tags: [Tasks]
+ *     responses:
+ *       200:
+ *         description: A list of tasks
+ */
+app.get("/tasks", (req, res) => {
+	res.send("Retrieve tasks");
+});
 
 // Define a basic route (GET request)
 app.get('/', (req: Request, res: Response) => {
