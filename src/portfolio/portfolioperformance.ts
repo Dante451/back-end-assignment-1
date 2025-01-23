@@ -1,4 +1,4 @@
-interface PortfolioPerformance {
+export interface PortfolioPerformance {
     initialInvestment: number;
     currentValue: number;
     profitOrLoss: number;
@@ -35,6 +35,5 @@ interface PortfolioPerformance {
       performanceSummary,
     };
   }
-const result = calculatePortfolioPerformance();
-console.log(result)
-  
+// const result = calculatePortfolioPerformance();
+// console.log(result)
